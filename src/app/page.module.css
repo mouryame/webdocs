@@ -1,0 +1,6 @@
+.page {
+  flex-grow: 1;
+  background-color: white;
+  margin: 0 calc(var(--pane-width) + 1rem);
+  padding: 1rem;
+}

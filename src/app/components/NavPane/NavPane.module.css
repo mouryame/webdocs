@@ -1,0 +1,5 @@
+.navPane {
+  width: var(--pane-width);
+  position: fixed;
+  left: var(--page-margin);
+}

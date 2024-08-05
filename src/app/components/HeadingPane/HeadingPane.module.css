@@ -1,0 +1,5 @@
+.headingPane {
+  width: var(--pane-width);
+  position: fixed;
+  right: var(--page-margin);
+}
