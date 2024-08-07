@@ -16,6 +16,12 @@ const queries = {
       )
       .join(",")})`;
   },
+  fetchAllPageDetails: () => {
+    return `SELECT * FROM pages`;
+  },
+  fetchPageByKey: (key, value) => {
+    return `SELECT * FROM pages where ${key} = '${value}'`;
+  },
 };
 
 export default queries;

@@ -43,3 +43,16 @@ export async function createTable({
   await db.exec(query);
   return "TABLE CREATED";
 }
+
+export async function fetchAllPages() {
+  const db = await openDb();
+  const query = queries.fetchAllPageDetails();
+  return await db.all(query);
+}
+
+export async function fetchPageByPath(value: string) {
+  const db = await openDb();
+  const query = queries.fetchPageByKey("path", value);
+  const resp = await db.all(query);
+  return resp[0];
+}

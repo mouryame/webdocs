@@ -4,4 +4,5 @@
   margin: 0 calc(var(--pane-width) + 1rem);
   padding: 1rem;
   box-shadow: 2px 2px 10px var(--color-shadow);
+  width: calc(100vw - calc(2 * var(--pane-width) + 2rem) - 1rem);
 }
