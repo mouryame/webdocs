@@ -1,4 +1,6 @@
 import { openDb } from "../db/connectDB";
+import queries from "../db/queries";
+
 export async function test() {
   try {
     const db = await openDb();
@@ -23,12 +25,21 @@ export async function insertDataInTable({
   dataObj: object;
 }) {
   const db = await openDb();
-  const query = `INSERT INTO ${tableName} (${Object.keys(dataObj).join(
-    ","
-  )}) VALUES (${Object.values(dataObj)
-    .map((item) => (item.type === "string" ? `"${item.value}"` : item.value))
-    .join(",")})`;
+  const query = queries.insertIntoTable(tableName, dataObj);
   console.log(query);
   await db.exec(query);
   return "INSERTED 1 ROW";
+}
+
+export async function createTable({
+  tableName,
+  columnsArr,
+}: {
+  tableName: string;
+  columnsArr: object[];
+}) {
+  const db = await openDb();
+  const query = queries.createTable(tableName, columnsArr);
+  await db.exec(query);
+  return "TABLE CREATED";
 }

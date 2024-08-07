@@ -65,6 +65,7 @@ h6 {
   --primary-color: #103cc9;
   --color-light-gray: #efefef;
   --color-white: #ffffff;
+  --color-shadow: #00000010;
 
   --header-height: 3rem;
   --pane-width: 15rem;
