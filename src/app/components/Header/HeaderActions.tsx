@@ -1,10 +1,17 @@
-"use client";
+import styles from "./Header.module.css";
+
 export default function HeaderActions() {
   return (
     <>
-      <button>New Page</button>
-      <button>Edit Page</button>
-      <button>Admin</button>
+      <a href="/create" className={styles.button}>
+        New Page
+      </a>
+      <a className={styles.button} href="/edit">
+        Edit Page
+      </a>
+      <a className={styles.button} href="/admin">
+        Admin
+      </a>
     </>
   );
 }

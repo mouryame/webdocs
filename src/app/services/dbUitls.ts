@@ -56,3 +56,10 @@ export async function fetchPageByPath(value: string) {
   const resp = await db.all(query);
   return resp[0];
 }
+
+export async function fetchLastID() {
+  const db = await openDb();
+  const query = queries.fetchLastID();
+  const resp = await db.all(query);
+  return resp[0].id;
+}

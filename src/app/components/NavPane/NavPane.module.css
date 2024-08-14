@@ -2,4 +2,6 @@
   width: var(--pane-width);
   position: fixed;
   left: var(--page-margin);
+  display: flex;
+  flex-direction: column;
 }

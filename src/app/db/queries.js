@@ -22,6 +22,9 @@ const queries = {
   fetchPageByKey: (key, value) => {
     return `SELECT * FROM pages where ${key} = '${value}'`;
   },
+  fetchLastID: () => {
+    return `SELECT id FROM pages ORDER BY ID DESC LIMIT 1`;
+  },
 };
 
 export default queries;
